@@ -13,21 +13,20 @@ runner(myFn);
  */
 
 // The second argument/parameter is expected to be a function
-let indexlocation = 0
+// let indexlocation = 0
 
 function findWaldo(arr, found) {
-    for (var i = 0; i < arr.length; i++) {
-      if (arr[i] === "Waldo") {
-        // foundlocation = i
-        found(i);   // execute callback
-      }
-    }
-/*   arr.forEach(function (element) {
+  /*    for (var i = 0; i < arr.length; i++) {
+         if (arr[i] === "Waldo") {
+          // foundlocation = i
+          found(i);   // execute callback
+        }
+      } */
+  arr.forEach(function (element) {
     if (element === "Waldo") {
-      found()
+      found(arr.indexOf(element))
     }
-    indexlocation += 1
-  }) */
+  })
 }
 
 function actionWhenFound(index) {
